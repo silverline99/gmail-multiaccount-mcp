@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Notice — Gmail multiaccount MCP</title>
+<meta name="description" content="How the Gmail multiaccount MCP tool handles Google user data.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+  <h1>Privacy Notice</h1>
+  <p class="lead">Gmail multiaccount MCP · last updated 8 October 2026</p>
+
+  <p>
+    This is a personal, local automation tool (“Gmail multiaccount MCP”, project
+    <code>ralyo-mcp</code>) built and used solely by its developer for personal productivity.
+    It runs as a local Model Context Protocol server on the developer's own machine. It is not a
+    public product, it is not distributed to other users, and it is not offered as a service.
+  </p>
+
+  <h2>What the app does with Google user data</h2>
+  <p>
+    The app accesses only Gmail data belonging to the developer's own Google accounts, which they
+    explicitly authorized through Google's OAuth consent flow. Two accounts are used, each with the
+    narrowest scope its task needs:
+  </p>
+  <table>
+    <thead>
+      <tr><th>Scope</th><th>Account</th><th>What it is used for</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>gmail.readonly</code></td>
+        <td>personal inbox</td>
+        <td>reading the developer's own messages (search, read) to extract data for their own bookkeeping</td>
+      </tr>
+      <tr>
+        <td><code>gmail.compose</code></td>
+        <td>invoicing inbox</td>
+        <td>creating <strong>drafts</strong> of outgoing invoice e-mails, with PDF attachments read from the local disk</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    The app <strong>never sends e-mail</strong>. It does not call <code>users.messages.send</code> or
+    <code>users.drafts.send</code>; drafts are always reviewed and sent by the developer by hand in the
+    Gmail web interface. It does not delete, archive or label messages.
+  </p>
+
+  <h2>How data is handled</h2>
+  <ul>
+    <li>All processing happens locally on the developer's own machine.</li>
+    <li>No data read from Gmail is transmitted to, stored on, or shared with any third party, server or
+        service other than the Google APIs required to operate (Gmail API).</li>
+    <li>No Gmail data is used for advertising, resold, or used to train any model.</li>
+    <li>OAuth tokens are cached only on the developer's own machine, in files readable solely by the
+        developer's user account, and are never uploaded anywhere.</li>
+    <li>Files attached to drafts are read from a short list of explicitly allowed folders on the
+        developer's own machine; nothing else on the disk is read.</li>
+    <li>Data is retained only for as long as the local files exist; there is no server-side storage,
+        database or backup.</li>
+  </ul>
+
+  <h2>Revoking access</h2>
+  <p>
+    The developer may revoke this app's access at any time at
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+    Deleting the local token files has the same effect for that machine.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    The app is operated by a single private individual, its developer. The support e-mail address
+    for the app is shown on Google's consent screen when the app asks for access, and at
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+  </p>
+
+  <footer><a href="../">← Gmail multiaccount MCP</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gmail multiaccount MCP</title>
+<meta name="description" content="A personal, local automation tool that reads its developer's own Gmail and prepares invoice e-mail drafts.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Gmail multiaccount MCP</h1>
+  <p class="lead">A personal automation tool that runs on its developer's own computer.</p>
+
+  <p>
+    This is a small <a href="https://modelcontextprotocol.io">Model Context Protocol</a> server used
+    by one person for their own bookkeeping. It reads that person's own Gmail messages and prepares
+    <strong>drafts</strong> of outgoing invoice e-mails, with the invoice PDF and delivery note
+    attached from files on the same computer.
+  </p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Reads the developer's own Gmail messages to pull data into their invoicing spreadsheet.</li>
+    <li>Creates draft e-mails with attachments, so the invoice does not have to be assembled by hand.</li>
+    <li>Writes rows into the developer's own Google Sheets and updates their own invoicing records.</li>
+  </ul>
+
+  <h2>What it does not do</h2>
+  <ul>
+    <li><strong>It never sends e-mail.</strong> Every draft is reviewed and sent by hand in Gmail.</li>
+    <li>It does not delete or archive messages.</li>
+    <li>It is not a product, is not distributed, and has no users other than its developer.</li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <p>
+    No data leaves the developer's computer except to the Google APIs the tool needs in order to work.
+    Details are in the <a href="privacy/">privacy notice</a>.
+  </p>
+
+  <footer>
+    <a href="privacy/">Privacy notice</a>
+  </footer>
+</main>
+</body>
+</html>
